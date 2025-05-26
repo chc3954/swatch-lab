@@ -13,8 +13,3 @@ export type ThemeColors = {
   info: string;
   border: string;
 };
-
-export type Theme = {
-  light: ThemeColors;
-  dark: ThemeColors;
-};
