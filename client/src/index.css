@@ -1,1 +1,6 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+  --spacing-header-height: 4rem;
+  --spacing-footer-height: 3rem;
+}
