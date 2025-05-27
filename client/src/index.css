@@ -17,7 +17,7 @@
   --border: #e5e7eb;
 }
 
-.dark {
+/* .dark {
   --background: #1f2937;
   --foreground: #f9fafb;
   --textBase: #e5e7eb;
@@ -32,7 +32,7 @@
   --success: #34d399;
   --info: #60a5fa;
   --border: #374151;
-}
+} */
 
 @theme {
   --spacing-header-height: 4rem;

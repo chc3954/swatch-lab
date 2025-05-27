@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="grid flex-1 grid-cols-[400px_1fr] bg-[var(--background)]">
+      <main className="relative flex-1 bg-[var(--background)]">
         <Sidebar />
         <Preview />
       </main>

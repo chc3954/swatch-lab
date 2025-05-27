@@ -4,7 +4,7 @@ export const AIRecommendationForm = () => {
   return (
     <form className="mt-4">
       <textarea
-        className="w-full rounded-md border p-2 focus:border-[var(--primary)] focus:ring-[var(--primary)] sm:text-sm"
+        className="w-full rounded-md border p-2 focus:border-[var(--primary)] focus:ring-[var(--primary)]"
         placeholder="Describe your vibe! (e.g. cozy autumn, sleek modern, playful pastel)"
         rows={4}
       />

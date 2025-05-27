@@ -11,7 +11,13 @@ export const ColorInput = ({ colorName, value, onChange }: ColorInputProps) => {
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     const key = e.key;
     // Allow only hexadecimal characters (0-9, A-F) and control keys
-    if (!/^[0-9A-F]$/i.test(key) && key !== 'Backspace' && key !== 'Delete' && key !== 'Enter') {
+    if (
+      !/^[0-9A-F]$/i.test(key) &&
+      key !== 'Backspace' &&
+      key !== 'Delete' &&
+      key !== 'ArrowLeft' &&
+      key !== 'ArrowRight'
+    ) {
       e.preventDefault();
     }
   };
@@ -35,7 +41,7 @@ export const ColorInput = ({ colorName, value, onChange }: ColorInputProps) => {
           id={colorName}
           name={colorName}
           value={value.split('#')[1].toUpperCase()}
-          className="w-full rounded-md border p-2 pl-6 focus:border-[var(--primary)] focus:ring-[var(--primary)] sm:text-sm"
+          className="w-full rounded-md border p-2 pl-6 focus:border-[var(--primary)] focus:ring-[var(--primary)]"
           placeholder={formatCamelCaseToSpaced(colorName)}
           onKeyDown={handleKeyDown}
           onChange={handleChange}
