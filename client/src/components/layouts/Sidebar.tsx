@@ -21,10 +21,7 @@ export const Sidebar = () => {
         {!isOpen ? (
           <Menu className="size-6 text-[var(--textOnPrimary)]" strokeWidth={3} />
         ) : (
-          <X
-            className="size-6 text-[var(--textBase)] transition-transform duration-200 hover:rotate-90"
-            strokeWidth={3}
-          />
+          <X className="size-6 text-[var(--textBase)]" strokeWidth={3} />
         )}
       </button>
       <aside
