@@ -23,7 +23,7 @@ export const ColorInput = ({ colorName, value, onChange }: ColorInputProps) => {
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const input = e.target.value.trim().toUpperCase();
+    const input = e.target.value.toUpperCase();
     onChange(colorName, `#${input}`);
   };
 
@@ -40,7 +40,7 @@ export const ColorInput = ({ colorName, value, onChange }: ColorInputProps) => {
           type="text"
           id={colorName}
           name={colorName}
-          value={value.split('#')[1].toUpperCase()}
+          value={value}
           className="w-full rounded-md border p-2 pl-6 focus:border-[var(--primary)] focus:ring-[var(--primary)]"
           placeholder={formatCamelCaseToSpaced(colorName)}
           onKeyDown={handleKeyDown}

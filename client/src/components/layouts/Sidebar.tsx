@@ -30,7 +30,7 @@ export const Sidebar = () => {
         <h3 className="mb-4 text-lg font-semibold">Sidebar</h3>
         <div className="flex flex-col space-y-2">
           {Object.entries(theme).map(([key, value]) => (
-            <ColorInput key={key} colorName={key} value={value} onChange={handleColorChange} />
+            <ColorInput key={key} colorName={key} value={value.split('#')[1].toUpperCase()} onChange={handleColorChange} />
           ))}
           <AIRecommendationForm />
         </div>
