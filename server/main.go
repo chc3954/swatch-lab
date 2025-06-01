@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"log"
 	"net/http"
 	"strings"
 	"time"
@@ -127,6 +128,8 @@ func main() {
 			return
 		}
 
+		log.Printf("Received request to generate theme with description: %s", req.Description)
+
 		prompt := createColorPrompt(req.Description)
 
 		payload, err := json.Marshal(OllamaGenerateRequest{
@@ -205,5 +208,7 @@ func main() {
 	})
 
 	fmt.Printf("Server running at http://localhost:%s\n", serverPort)
-	router.Run(":" + serverPort)
+	if err := router.Run("0.0.0.0:" + serverPort); err != nil {
+        fmt.Printf("Server failed to start: %v\n", err)
+    }
 }
