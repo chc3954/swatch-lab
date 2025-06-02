@@ -4,6 +4,8 @@
 
 This is a full-stack web application designed to help users visualize and manage UI themes in real time using hex color codes. The app provides an intuitive GUI where users can input color values for various UI elements and immediately preview the resulting design. For added creativity and ease, AI-generated theme suggestions are available based on user descriptions.
 
+> ⚠️ **Note:** Since Ollama is running inside a Proxmox container, only models smaller than 1B parameters are currently used. As a result, the quality of AI-generated theme suggestions may not always meet expectations.
+
 ![image](https://github.com/user-attachments/assets/797dfcaa-2d92-41c4-abd4-b7ad062c41c9)
 
 ---
