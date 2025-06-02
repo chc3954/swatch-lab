@@ -48,7 +48,7 @@ export const ColorInput = ({ colorName, value, onChange }: ColorInputProps) => {
         />
         <div
           className="absolute top-1/2 right-2 size-4 -translate-y-1/2 rounded-full shadow-md"
-          style={{ backgroundColor: value }}
+          style={{ backgroundColor: `#${value}` }}
         ></div>
       </div>
     </div>
